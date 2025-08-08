@@ -9,7 +9,7 @@
 | SYS_FAN_1                           | J17 SYS_FAN1 | 主板底边最右侧、24-pin ATX 旁    | 0x02    | 机箱风扇 |
 | SYS_FAN_2                           | J21 SYS_FAN2 | 底边靠近电池位置                 | 0x03    | 硬盘风扇 |
 | SYS_FAN_3                           | J18 SYS_FAN3 | 底边靠左、靠近芯片组散热片       | 0x04    | PCIE风扇 |
-| SYS_FAN_4（理论上是的，但是我没用） | J42 FAN_FP   | 需接配套转接线                   | 0x05    | 没写     |
+| SYS_FAN_4                           | J42 FAN_FP   | 需接配套转接线                   | 0x05    | 没写     |
 
 ![OIP](https://github.com/user-attachments/assets/c22dcecc-78c2-4465-8da9-1e041163bf96)
 
@@ -20,8 +20,8 @@
 > 脚本由CHATGPT生成，可以随意更改，本脚本仅在 pve 9.0 ， S8030GM4NE-2T + epyc 7302p + lsi 9361-8i 上测试通过 ，其他的平台不保证测试通过
 >
 > 机箱风扇关联的pcie和cpu风扇，机箱风扇被软限制为最高转速50%，当机箱内温度确实特别高时，才会提升机箱风扇
-
-
+>
+> SYS_FAN_4我没用，只能是理论上，有些主板在FAN1旁边还有一个，但是我没用过，不太清楚具体是怎么排布
 
 
 
