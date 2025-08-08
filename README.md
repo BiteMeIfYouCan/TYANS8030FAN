@@ -15,9 +15,18 @@
 
 
 
-感谢以下大佬分享方案：
-chiphell 的 wangmice：[今天无意中发现泰安S8030通过ipmi控制风扇速度的命令，记录一下](https://www.chiphell.com/thread-2604921-1-1.html)
+### 注意事项：
 
-github 的 sonmihpc：[sonmihpc/AutoFan: 适配泰安S8030显卡机自动调节系统风扇组件](https://github.com/sonmihpc/AutoFan)
+> 脚本由CHATGPT生成，可以随意更改，本脚本仅在 pve 9.0 ， S8030GM4NE-2T + epyc 7302p + lsi 9361-8i 上测试通过 ，其他的平台不保证测试通过
+>
+> 机箱风扇关联的pcie和cpu风扇，机箱风扇被软限制为最高转速50%，当机箱内温度确实特别高时，才会提升机箱风扇
 
-感谢本世纪最伟大的工具：ChatGPT
+
+
+#### 感谢以下大佬分享方案：
+
+> chiphell 的 wangmice：[今天无意中发现泰安S8030通过ipmi控制风扇速度的命令，记录一下](https://www.chiphell.com/thread-2604921-1-1.html)
+>
+> github 的 sonmihpc：[sonmihpc/AutoFan: 适配泰安S8030显卡机自动调节系统风扇组件](https://github.com/sonmihpc/AutoFan)
+>
+> 感谢本世纪最伟大的工具：ChatGPT
