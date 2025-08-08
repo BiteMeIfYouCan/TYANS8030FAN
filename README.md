@@ -25,31 +25,31 @@
 
 #### 使用方法：
 
-1. ```
-   1) 干跑一轮（不会下发 ipmitool），并在前台显示日志
-      sudo ./fan3.py --dry-run --verbose --once --foreground
-   
-   2) 常驻运行，5 秒一轮，写 /var/log/fanctl.log（若无权限自动回退到 ./fanctl.log）
-      sudo ./fan3.py --interval 5
-   
-   3) 临时手动设置某路转速（会记录到日志）
-      sudo ./fan3.py --set pcie 80
-      sudo ./fan3.py --set chassis 70
-      sudo ./fan3.py --set cpu 65
-      sudo ./fan3.py --set hdd 60
-   
-   4) 自定义曲线
-      cat >/etc/fanctl.json <<'JSON'
-      {
-        "pcie": [[40,20],[65,50],[75,80],[80,100]],
-        "cpu":  [[40,15],[55,40],[70,70],[80,100]],
-        "hdd":  [[30,20],[40,35],[50,60],[55,100]]
-      }
-      JSON
-      sudo ./fan3.py --config /etc/fanctl.json
-   ```
+```
+1) 干跑一轮（不会下发 ipmitool），并在前台显示日志
+   sudo ./fan3.py --dry-run --verbose --once --foreground
 
-   
+2) 常驻运行，5 秒一轮，写 /var/log/fanctl.log（若无权限自动回退到 ./fanctl.log）
+   sudo ./fan3.py --interval 5
+
+3) 临时手动设置某路转速（会记录到日志）
+   sudo ./fan3.py --set pcie 80
+   sudo ./fan3.py --set chassis 70
+   sudo ./fan3.py --set cpu 65
+   sudo ./fan3.py --set hdd 60
+
+4) 自定义曲线
+   cat >/etc/fanctl.json <<'JSON'
+   {
+     "pcie": [[40,20],[65,50],[75,80],[80,100]],
+     "cpu":  [[40,15],[55,40],[70,70],[80,100]],
+     "hdd":  [[30,20],[40,35],[50,60],[55,100]]
+   }
+   JSON
+   sudo ./fan3.py --config /etc/fanctl.json
+```
+
+
 
 
 
